@@ -1,38 +1,173 @@
-.App {
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input{
+  padding: 4px;
+  width: 30vw;
+  height: 25px;
+  margin-right: 8px;
+  z-index: 2;
+}
+
+.add-button{
+  border-width: 2px;
+  background-color: #F8E796;
+  ; /* Green */
+  border: solid;
+  color: #604236;
+  padding: 5px 20px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  z-index: 2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style: none;
+  width: 100%;
+  z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  margin: 12px 0;
+  padding: 10px 15px;
+  width: auto;
+  z-index: 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1{
+  font-size: 4.5rem;
+  z-index: 2;
+}
+
+.h1-remover:hover{
+  display: none;
+  transition-duration: .5s;
+}
+
+.delete-button{
+  display: block;
+  align-items: center;
+}
+
+.App{
+  text-align: center;
+  margin: 0;
+  font-family: 'Fjalla One', sans-serif;
+  display: block;
+}
+.item-div{
+  display: inline-block;
+  width: 30%;
+  background-color: #f8e896a8;
+  margin: 2% 5%;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.bgAnimation{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(20,1fr);
+  grid-template-rows: repeat(20,1fr);
+  background: #1d1d1d2f;
+  filter: saturate(2);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.colorBox{
+  z-index: 2;
+  filter: brightness(1.1);
+  transition: 2s ease;
+  position: relative;
+  margin: 2px;
+  background:  #e3dbb7;
+}
+
+.colorBox:hover{
+  background: #c2998700;
+  transition-duration: 0s;
+}
+
+#top-container{
+  background: #f8e89672;
+  margin: 0;
+  height: 50vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 2;
 }
-
-.App-link {
-  color: #61dafb;
+#form{
+  z-index: 2;
+  background: #C98B70;
+  margin: 0 0 3%;
+  padding: 20px 0;
+ 
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 40vh;
+  width: 100vw;
+  z-index: 2;
 }
